@@ -21,7 +21,7 @@ service: aws-spring-cloud-function-maven
 provider:
   name: aws
   runtime: java8
-  timeout: 10
+  timeout: 30
 
 # you can overwrite defaults here
 #  stage: dev
@@ -63,6 +63,9 @@ functions:
           path: hello-spring-cloud-function
           method: post
           integration: lambda
+          request:
+            template: 
+              application/json: '$input.json("$")'
 #      - s3: ${env:BUCKET}
 #      - schedule: rate(10 minutes)
 #      - sns: greeter-topic
