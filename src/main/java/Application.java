@@ -2,12 +2,10 @@
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
-import org.springframework.cloud.function.context.FunctionScan;
 
 import config.Properties;
 
-@FunctionScan
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages = "config")
 @EnableConfigurationProperties(Properties.class)
 public class Application {
 
