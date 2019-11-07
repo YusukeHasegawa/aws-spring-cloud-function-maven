@@ -1,0 +1,11 @@
+{
+  "name": "aws-spring-cloud-function-maven",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/YusukeHasegawa/aws-spring-cloud-function-maven.git",
+  "author": "YusukeHasegawa",
+  "license": "MIT",
+  "devDependencies": {
+    "serverless": "^1.56.1"
+  }
+}
